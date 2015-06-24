@@ -14,6 +14,7 @@ public:
     static sf::Texture BULLET;
     static sf::Texture Gameover;
     static sf::Texture MISSION;
+    static sf::Texture BOSS;
     static void load();
 };
 #endif // TEXTURE_H_INCLUDED

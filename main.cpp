@@ -37,7 +37,10 @@ int main()
     sf::Sprite mission(Texture::MISSION);
     ENIMY enimy;
     ENIMY enimy2;
+    ENIMY boss;
+    boss.isboss();
     enimy2.setPosition(-500.f,400.f);
+    int prod=0;
     int i=0;
     int j;
     while (window.isOpen())
@@ -137,7 +140,7 @@ int main()
             window.clear();
             window.draw(GAMEOVER);
         }
-        if((enimy.score()+enimy2.score())>99)
+        if((enimy.score()+enimy2.score())>99&&(enimy.score()+enimy2.score())<500)
         {
             window.clear();
             window.draw(mission);
@@ -146,6 +149,11 @@ int main()
             enimy2.liveup();
             sf::sleep(sf::seconds(1.f));
             fighter.life=3;
+            prod+=1;
+        }
+        if(prod>=5)
+        {
+            window.draw(boss);
         }
         window.display();
         window.clear();

@@ -8,6 +8,7 @@ sf::Texture Texture::SKY;
 sf::Texture Texture::figb;
 sf::Texture Texture::Gameover;
 sf::Texture Texture::MISSION;
+sf::Texture Texture::BOSS;
 void Texture::load()
 {
     Texture::Fighter.loadFromFile("resources/fighter.png");
@@ -18,5 +19,6 @@ void Texture::load()
     Texture::figb.loadFromFile("resources/frib.png");
     Texture::Gameover.loadFromFile("resources/gameover.png");
     Texture::MISSION.loadFromFile("resources/mission.jpg");
+    Texture::BOSS.loadFromFile("shoot.png",sf::IntRect(173,733,100,200));
 }
 

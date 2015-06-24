@@ -12,6 +12,7 @@ public:
     int score();
     void fire(sf::Time time);
     void liveup();
+    void isboss();
 private:
     int random();
     sf::Vector2f position;

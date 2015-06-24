@@ -63,3 +63,7 @@ void ENIMY::liveup()
 {
     ENIMY::life=0;
 }
+void ENIMY::isboss()
+{
+    this->setTexture(Texture::BOSS);
+}
